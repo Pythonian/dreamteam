@@ -51,9 +51,8 @@
 								  -
 								{% endif %}
 							  </td>
-							  <td>
-								<a href="{{ url_for('admin.assign_employee', id=employee.id) }}">
-								  <i class="fa fa-user-plus"></i> Assign
+							  <td class="assign">
+								<a href="{{ url_for('admin.assign_employee', id=employee.id) }}">Assign
 								</a>
 							  </td>
 							</tr>

@@ -21,7 +21,8 @@ class TestBase(TestCase):
         """
         This will be called before every test
         """
-        # Creates all database table
+        db.session.commit()
+        db.drop_all()
         db.create_all()
 
         # create test admin user

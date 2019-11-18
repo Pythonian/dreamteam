@@ -36,8 +36,8 @@
                                     {{ department.employees.count() }}
                                     {% else %} 0 {% endif %}
                                 </td>
-                                <td><a href="{{ url_for('admin.edit_department', id=department.id) }}">Edit</a></td>
-                                <td><a href="{{ url_for('admin.delete_department', id=department.id) }}">Delete</a></td>
+                                <td class="edit-department"><a href="{{ url_for('admin.edit_department', id=department.id) }}">Edit</a></td>
+                                <td class="delete-department"><a href="{{ url_for('admin.delete_department', id=department.id) }}">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>

@@ -6,3 +6,5 @@ Flask-SQLAlchemy==2.4.1
 Flask-Testing==0.7.1
 Flask-WTF==0.14.2
 python-dotenv==0.10.3
+nose2==0.9.1
+selenium==3.141.0
