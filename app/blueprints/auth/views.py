@@ -1,6 +1,6 @@
 from flask import flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
-from werkzeug.urls import url_parse
+from urllib.parse import urlparse
 
 from app.extensions import db
 from app.models import Employee
@@ -64,7 +64,7 @@ def login():
             next_page = request.args.get('next')
             # if the login URL doesn't have a next argument
             # or it's argument is set to a full URL that includes a domain name
-            if not next_page or url_parse(next_page).netloc != '':
+            if not next_page or urlparse(next_page).netloc != '':
                 # redirect to the appropriate dashboard page after login
                 if current_user.is_admin:
                     next_page = url_for('home.admin_dashboard')
